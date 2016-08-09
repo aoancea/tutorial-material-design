@@ -144,6 +144,7 @@ master: short text from original repository	v5
 master: short text from original repository	v5
 
 master: short text from master which is overriden by stashed code
+branch-1.0: short text from branch-1.0 stashed
 
 master: short text from fork repository	v1
 master: short text from fork repository	v1
