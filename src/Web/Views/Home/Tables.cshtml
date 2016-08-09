@@ -5,8 +5,12 @@
 
 <h2>Tables</h2>
 
-<div class="mdl-grid mdl-layout__content mdl-color--grey-100" ng-app="tutorialMaterialDesign">
 
+
+<div class="mdl-grid mdl-layout__content mdl-color--grey-100" ng-controller="productsController as productsCtrl">
+    <a style="cursor:pointer" ng-click="productsCtrl.loadProducts()">Get new page</a>
+
+    <a style="cursor:pointer" ng-click="productsCtrl.changeProduct()">Change a product</a>
     <div class="mdl-grid mdl-cell--12-col">
         <table class="mdl-data-table mdl-shadow--2dp mdl-cell--12-col" style="margin: 0 auto;">
             <thead>
@@ -17,65 +21,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                    <td>25</td>
-                    <td>$2.90</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                    <td>50</td>
-                    <td>$1.25</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                    <td>10</td>
-                    <td>$2.35</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                    <td>25</td>
-                    <td>$2.90</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                    <td>50</td>
-                    <td>$1.25</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                    <td>10</td>
-                    <td>$2.35</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                    <td>25</td>
-                    <td>$2.90</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                    <td>50</td>
-                    <td>$1.25</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                    <td>10</td>
-                    <td>$2.35</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                    <td>25</td>
-                    <td>$2.90</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                    <td>50</td>
-                    <td>$1.25</td>
-                </tr>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                    <td>10</td>
-                    <td>$2.35</td>
+                <tr ng-repeat="product in productsCtrl.products">
+                    <td class="mdl-data-table__cell--non-numeric">{{product.Name}}</td>
+                    <td>{{product.Quantity}}</td>
+                    <td>${{product.Price}}</td>
+                    <td>
+                        <!-- Accent-colored raised button with ripple -->
+                        <button ng-click="productsCtrl.removeProduct(product)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                            Remove
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

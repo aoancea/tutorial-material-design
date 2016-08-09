@@ -178,6 +178,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -191,6 +192,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.module.js" />
+    <Content Include="app\controllers\products.controller.js" />
+    <Content Include="app\services\products.service.js" />
     <Content Include="branch 1.0.file.1.txt" />
     <Content Include="branch 1.0.file.2.txt" />
     <Content Include="branch 1.0.file.3.txt" />

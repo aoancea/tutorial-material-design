@@ -12,8 +12,15 @@
 
 
 	<link href="~/Content/mdl-v1.1.2/material.css" rel="stylesheet" />
+
+    <style>
+        .mdl-data-table tbody tr {
+            transition-duration: 0s;
+        }
+    </style>
+
 </head>
-<body>
+<body ng-app="tutorialMaterialDesign">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -50,6 +57,9 @@
 	<script src="~/Scripts/angular-animate/angular-animate.js"></script>
 	<script src="~/Scripts/angular-material/angular-material.js"></script>
 	<script src="~/app/app.module.js"></script>
+
+    <script src="~/app/services/products.service.js"></script>
+    <script src="~/app/controllers/products.controller.js"></script>
 
 	@*<script src="~/Content/mdl-v1.1.2/material.js"></script>*@
 
