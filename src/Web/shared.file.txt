@@ -160,3 +160,5 @@ master: short text from fork repository	v1
 
 master: short text from master with conflict
 branch-1.0: short text from branch-1.0 with conflict
+
+master: short text from master with conflict but ignore whitespace
